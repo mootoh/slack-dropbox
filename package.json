@@ -1,0 +1,15 @@
+{
+  "name": "slack-dropbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Motohiro Takayama",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.11.1",
+    "request": "^2.67.0"
+  }
+}
