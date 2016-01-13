@@ -2,15 +2,13 @@
 
 const dropboxUpload = require('./lib/dropbox_upload');
 const slackHistory = require('./lib/slack_history')
-const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
 
-const config = JSON.parse(fs.readFileSync('./config.json'));
-const dropbox_access_token = config.dropbox_access_token;
-const dropbox_folder = config.dropbox_folder;
-const slack_token = config.slack_token;
-const slack_channel = config.slack_channel;
+const dropbox_access_token = process.env.DROPBOX_ACCESS_TOKEN;
+const dropbox_folder = process.env.DROPBOX_FOLDER;
+const slack_token = process.env.SLACK_TOKEN;
+const slack_channel = process.env.SLACK_CHANNEL;
 
 // Fetch Slack history for yesterday
 const oldest = moment().add(-1, 'days').startOf('day').unix();
